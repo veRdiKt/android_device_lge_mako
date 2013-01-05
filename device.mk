@@ -159,6 +159,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 #Upto 3 layers can go through overlays
 PRODUCT_PROPERTY_OVERRIDES += debug.mdpcomp.maxlayer=3
 
+# Force the pre-dexopt on eng build for some extra speed
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.dalvik.force.dexopt=true
+
 PRODUCT_CHARACTERISTICS := nosdcard
 
 PRODUCT_TAGS += dalvik.gc.type-precise
